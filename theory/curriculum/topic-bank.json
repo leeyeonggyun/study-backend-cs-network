@@ -1,96 +1,186 @@
 {
-  "learner_level": "beginner",
+  "learner_level": "absolute_beginner",
   "domains": ["backend", "cs", "network"],
   "topics": [
     {
-      "id": "http-request-lifecycle",
+      "id": "computer-program-process-basics",
       "level": 0,
-      "domain": "backend",
-      "title": "HTTP request lifecycle",
+      "domain": "cs",
+      "title": "컴퓨터, 프로그램, 프로세스 기초",
       "prerequisites": [],
       "builds_on": [],
-      "subtopics": ["client-server", "method", "status-code", "header-body"],
-      "practice_type": "small API server"
+      "subtopics": ["computer", "program", "process", "input-output"],
+      "practice_type": "terminal observation"
     },
     {
-      "id": "tcp-port-basics",
+      "id": "client-server-basics",
+      "level": 0,
+      "domain": "backend",
+      "title": "클라이언트와 서버 기초",
+      "prerequisites": ["computer-program-process-basics"],
+      "builds_on": ["computer-program-process-basics"],
+      "subtopics": ["client", "server", "request", "response"],
+      "practice_type": "simple request flow observation"
+    },
+    {
+      "id": "internet-domain-dns-basics",
       "level": 0,
       "domain": "network",
-      "title": "TCP connection and ports",
-      "prerequisites": [],
-      "builds_on": ["http-request-lifecycle"],
-      "subtopics": ["socket", "port", "listen", "connect"],
-      "practice_type": "connection experiment"
+      "title": "인터넷, 도메인, IP, DNS 기초",
+      "prerequisites": ["client-server-basics"],
+      "builds_on": ["client-server-basics"],
+      "subtopics": ["internet", "domain", "ip", "dns"],
+      "practice_type": "dns lookup observation"
     },
     {
-      "id": "rest-status-codes",
-      "level": 1,
-      "domain": "backend",
-      "title": "REST API and status codes",
-      "prerequisites": ["http-request-lifecycle"],
-      "builds_on": ["http-request-lifecycle"],
-      "subtopics": ["resource", "method semantics", "error response"],
-      "practice_type": "CRUD API"
+      "id": "port-basics",
+      "level": 0,
+      "domain": "network",
+      "title": "포트의 의미와 기본 관찰",
+      "prerequisites": ["computer-program-process-basics", "client-server-basics"],
+      "builds_on": ["computer-program-process-basics", "client-server-basics"],
+      "subtopics": ["port", "listen", "connect", "service entry point"],
+      "practice_type": "port observation"
     },
     {
-      "id": "server-logging",
+      "id": "http-request-response-basics",
+      "level": 0,
+      "domain": "backend",
+      "title": "HTTP 요청과 응답 기초",
+      "prerequisites": ["client-server-basics", "internet-domain-dns-basics", "port-basics"],
+      "builds_on": ["client-server-basics", "port-basics"],
+      "subtopics": ["http", "request", "response", "browser-server flow"],
+      "practice_type": "http inspection"
+    },
+    {
+      "id": "url-method-header-body-basics",
+      "level": 0,
+      "domain": "backend",
+      "title": "URL, method, header, body 기초",
+      "prerequisites": ["http-request-response-basics"],
+      "builds_on": ["http-request-response-basics"],
+      "subtopics": ["url", "path", "query", "header", "body", "method"],
+      "practice_type": "request dissection"
+    },
+    {
+      "id": "status-code-basics",
+      "level": 0,
+      "domain": "backend",
+      "title": "기본 status code 기초",
+      "prerequisites": ["http-request-response-basics"],
+      "builds_on": ["http-request-response-basics"],
+      "subtopics": ["200", "201", "400", "404", "500"],
+      "practice_type": "response comparison"
+    },
+    {
+      "id": "json-api-basics",
+      "level": 0,
+      "domain": "backend",
+      "title": "JSON과 API 기초",
+      "prerequisites": ["url-method-header-body-basics"],
+      "builds_on": ["url-method-header-body-basics"],
+      "subtopics": ["json", "key-value", "api payload", "serialization"],
+      "practice_type": "json request-response lab"
+    },
+    {
+      "id": "server-routing-basics",
       "level": 1,
       "domain": "backend",
-      "title": "Server logging",
-      "prerequisites": ["http-request-lifecycle", "rest-status-codes"],
-      "builds_on": ["rest-status-codes"],
-      "subtopics": ["request log", "error log", "correlation id"],
-      "practice_type": "debugging lab"
+      "title": "서버 라우팅 기초",
+      "prerequisites": ["http-request-response-basics", "json-api-basics"],
+      "builds_on": ["http-request-response-basics", "json-api-basics"],
+      "subtopics": ["route", "handler", "path matching"],
+      "practice_type": "tiny web server"
+    },
+    {
+      "id": "validation-error-basics",
+      "level": 1,
+      "domain": "backend",
+      "title": "요청 검증과 에러 응답 기초",
+      "prerequisites": ["status-code-basics", "server-routing-basics"],
+      "builds_on": ["status-code-basics", "server-routing-basics"],
+      "subtopics": ["validation", "bad request", "error body"],
+      "practice_type": "validation lab"
+    },
+    {
+      "id": "logging-basics",
+      "level": 1,
+      "domain": "backend",
+      "title": "서버 로그 기초",
+      "prerequisites": ["server-routing-basics"],
+      "builds_on": ["server-routing-basics"],
+      "subtopics": ["request log", "error log", "timestamp"],
+      "practice_type": "log reading lab"
+    },
+    {
+      "id": "test-basics",
+      "level": 1,
+      "domain": "backend",
+      "title": "서버 테스트 기초",
+      "prerequisites": ["server-routing-basics"],
+      "builds_on": ["server-routing-basics"],
+      "subtopics": ["expected result", "assertion", "regression"],
+      "practice_type": "basic API test"
+    },
+    {
+      "id": "database-basics",
+      "level": 1,
+      "domain": "cs",
+      "title": "데이터베이스와 테이블 기초",
+      "prerequisites": ["json-api-basics"],
+      "builds_on": ["json-api-basics"],
+      "subtopics": ["database", "table", "row", "column"],
+      "practice_type": "data storage comparison"
+    },
+    {
+      "id": "crud-api-basics",
+      "level": 1,
+      "domain": "backend",
+      "title": "CRUD API 기초",
+      "prerequisites": ["database-basics", "validation-error-basics"],
+      "builds_on": ["database-basics", "validation-error-basics"],
+      "subtopics": ["create", "read", "update", "delete"],
+      "practice_type": "todo crud lab"
+    },
+    {
+      "id": "transaction-intro",
+      "level": 2,
+      "domain": "cs",
+      "title": "트랜잭션 입문",
+      "prerequisites": ["crud-api-basics"],
+      "builds_on": ["crud-api-basics"],
+      "subtopics": ["commit", "rollback", "all or nothing"],
+      "practice_type": "transfer lab"
+    },
+    {
+      "id": "tcp-basics",
+      "level": 2,
+      "domain": "network",
+      "title": "TCP 연결 기초",
+      "prerequisites": ["port-basics", "http-request-response-basics"],
+      "builds_on": ["port-basics", "http-request-response-basics"],
+      "subtopics": ["connection", "stream", "handshake"],
+      "practice_type": "tcp observation"
     },
     {
       "id": "timeout-basics",
       "level": 2,
       "domain": "network",
-      "title": "Timeout basics",
-      "prerequisites": ["http-request-lifecycle", "tcp-port-basics"],
-      "builds_on": ["tcp-port-basics"],
-      "subtopics": ["connect timeout", "read timeout", "timeout budget"],
+      "title": "timeout 기초",
+      "prerequisites": ["tcp-basics"],
+      "builds_on": ["tcp-basics"],
+      "subtopics": ["connect timeout", "read timeout", "waiting too long"],
       "practice_type": "slow server lab"
     },
     {
-      "id": "redis-ttl",
+      "id": "redis-ttl-intro",
       "level": 2,
       "domain": "backend",
-      "title": "Redis TTL",
-      "prerequisites": ["http-request-lifecycle", "rest-status-codes", "server-logging"],
-      "builds_on": ["rest-status-codes", "server-logging"],
-      "subtopics": ["expire", "session", "cache invalidation"],
-      "practice_type": "Redis session lab"
-    },
-    {
-      "id": "db-transaction",
-      "level": 2,
-      "domain": "cs",
-      "title": "Database transactions",
-      "prerequisites": ["http-request-lifecycle", "rest-status-codes"],
-      "builds_on": ["rest-status-codes"],
-      "subtopics": ["atomicity", "commit", "rollback", "isolation"],
-      "practice_type": "transfer API lab"
-    },
-    {
-      "id": "connection-pool",
-      "level": 3,
-      "domain": "backend",
-      "title": "Connection pool",
-      "prerequisites": ["tcp-port-basics", "timeout-basics", "db-transaction"],
-      "builds_on": ["tcp-port-basics", "timeout-basics"],
-      "subtopics": ["pool size", "queueing", "resource exhaustion"],
-      "practice_type": "load experiment"
-    },
-    {
-      "id": "retry-idempotency",
-      "level": 3,
-      "domain": "backend",
-      "title": "Retry and idempotency",
-      "prerequisites": ["rest-status-codes", "timeout-basics", "db-transaction"],
-      "builds_on": ["timeout-basics", "db-transaction"],
-      "subtopics": ["duplicate request", "idempotency key", "safe retry"],
-      "practice_type": "payment-like API lab"
+      "title": "Redis TTL 입문",
+      "prerequisites": ["crud-api-basics", "timeout-basics"],
+      "builds_on": ["crud-api-basics", "timeout-basics"],
+      "subtopics": ["cache", "expire", "temporary data"],
+      "practice_type": "simple ttl lab"
     }
   ]
 }

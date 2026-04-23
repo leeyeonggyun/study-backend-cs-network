@@ -1,7 +1,11 @@
 {
   "name": "learner",
-  "goal": "Backend, CS, and network skill-up from beginner level",
+  "goal": "Backend, CS, and network skill-up from absolute beginner level",
   "current_level": 0,
+  "starting_mode": "absolute_beginner_reset",
+  "curriculum_reset_date": "2026-04-24",
+  "assumption": "The learner should be treated as knowing almost nothing about backend, CS, and networking.",
+  "restart_from_topic": "computer-program-process-basics",
   "preferred_language": "ko",
   "daily_load": {
     "main_topics": 1,
@@ -13,6 +17,12 @@
     "promote_when": "3 consecutive days with quiz score >= 75% and practice completed",
     "hold_when": "quiz score < 75% or reflection says the concept is unclear",
     "review_when": "wrong answer appears twice or practice blocker repeats"
+  },
+  "teaching_rule": {
+    "define_terms_before_using_them": true,
+    "avoid_assuming_prior_backend_knowledge": true,
+    "avoid_assuming_prior_network_knowledge": true,
+    "avoid_assuming_prior_cs_knowledge": true,
+    "only_one_abstraction_jump_per_day": true
   }
 }
-
