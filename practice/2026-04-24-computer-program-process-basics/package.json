@@ -1,0 +1,11 @@
+{
+  "name": "computer-program-process-basics",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Absolute beginner practice for program/process basics",
+  "scripts": {
+    "hello": "node hello.js",
+    "echo": "node echo-input.js",
+    "process": "node long-running-process.js"
+  }
+}
