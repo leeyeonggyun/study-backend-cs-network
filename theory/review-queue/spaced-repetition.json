@@ -1,0 +1,10 @@
+{
+  "queue": [],
+  "rules": {
+    "first_review": "next_day",
+    "second_review": "plus_3_days",
+    "third_review": "plus_7_days",
+    "repeat_on_wrong_answer": true
+  }
+}
+

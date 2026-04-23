@@ -1,0 +1,96 @@
+{
+  "learner_level": "beginner",
+  "domains": ["backend", "cs", "network"],
+  "topics": [
+    {
+      "id": "http-request-lifecycle",
+      "level": 0,
+      "domain": "backend",
+      "title": "HTTP request lifecycle",
+      "prerequisites": [],
+      "builds_on": [],
+      "subtopics": ["client-server", "method", "status-code", "header-body"],
+      "practice_type": "small API server"
+    },
+    {
+      "id": "tcp-port-basics",
+      "level": 0,
+      "domain": "network",
+      "title": "TCP connection and ports",
+      "prerequisites": [],
+      "builds_on": ["http-request-lifecycle"],
+      "subtopics": ["socket", "port", "listen", "connect"],
+      "practice_type": "connection experiment"
+    },
+    {
+      "id": "rest-status-codes",
+      "level": 1,
+      "domain": "backend",
+      "title": "REST API and status codes",
+      "prerequisites": ["http-request-lifecycle"],
+      "builds_on": ["http-request-lifecycle"],
+      "subtopics": ["resource", "method semantics", "error response"],
+      "practice_type": "CRUD API"
+    },
+    {
+      "id": "server-logging",
+      "level": 1,
+      "domain": "backend",
+      "title": "Server logging",
+      "prerequisites": ["http-request-lifecycle", "rest-status-codes"],
+      "builds_on": ["rest-status-codes"],
+      "subtopics": ["request log", "error log", "correlation id"],
+      "practice_type": "debugging lab"
+    },
+    {
+      "id": "timeout-basics",
+      "level": 2,
+      "domain": "network",
+      "title": "Timeout basics",
+      "prerequisites": ["http-request-lifecycle", "tcp-port-basics"],
+      "builds_on": ["tcp-port-basics"],
+      "subtopics": ["connect timeout", "read timeout", "timeout budget"],
+      "practice_type": "slow server lab"
+    },
+    {
+      "id": "redis-ttl",
+      "level": 2,
+      "domain": "backend",
+      "title": "Redis TTL",
+      "prerequisites": ["http-request-lifecycle", "rest-status-codes", "server-logging"],
+      "builds_on": ["rest-status-codes", "server-logging"],
+      "subtopics": ["expire", "session", "cache invalidation"],
+      "practice_type": "Redis session lab"
+    },
+    {
+      "id": "db-transaction",
+      "level": 2,
+      "domain": "cs",
+      "title": "Database transactions",
+      "prerequisites": ["http-request-lifecycle", "rest-status-codes"],
+      "builds_on": ["rest-status-codes"],
+      "subtopics": ["atomicity", "commit", "rollback", "isolation"],
+      "practice_type": "transfer API lab"
+    },
+    {
+      "id": "connection-pool",
+      "level": 3,
+      "domain": "backend",
+      "title": "Connection pool",
+      "prerequisites": ["tcp-port-basics", "timeout-basics", "db-transaction"],
+      "builds_on": ["tcp-port-basics", "timeout-basics"],
+      "subtopics": ["pool size", "queueing", "resource exhaustion"],
+      "practice_type": "load experiment"
+    },
+    {
+      "id": "retry-idempotency",
+      "level": 3,
+      "domain": "backend",
+      "title": "Retry and idempotency",
+      "prerequisites": ["rest-status-codes", "timeout-basics", "db-transaction"],
+      "builds_on": ["timeout-basics", "db-transaction"],
+      "subtopics": ["duplicate request", "idempotency key", "safe retry"],
+      "practice_type": "payment-like API lab"
+    }
+  ]
+}

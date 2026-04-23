@@ -1,0 +1,18 @@
+{
+  "name": "learner",
+  "goal": "Backend, CS, and network skill-up from beginner level",
+  "current_level": 0,
+  "preferred_language": "ko",
+  "daily_load": {
+    "main_topics": 1,
+    "sub_topics": 1,
+    "quiz_count": 4,
+    "practice_count": 1
+  },
+  "difficulty_rule": {
+    "promote_when": "3 consecutive days with quiz score >= 75% and practice completed",
+    "hold_when": "quiz score < 75% or reflection says the concept is unclear",
+    "review_when": "wrong answer appears twice or practice blocker repeats"
+  }
+}
+
