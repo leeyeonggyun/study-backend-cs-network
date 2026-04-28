@@ -1,186 +1,116 @@
 {
-  "learner_level": "absolute_beginner",
-  "domains": ["backend", "cs", "network"],
+  "learner_level": "strict_progressive",
+  "domains": ["cs", "network", "cs-network-applied"],
   "topics": [
     {
-      "id": "computer-program-process-basics",
+      "id": "program-process-thread-basics",
       "level": 0,
       "domain": "cs",
-      "title": "컴퓨터, 프로그램, 프로세스 기초",
+      "title": "프로그램, 프로세스, 스레드의 경계",
       "prerequisites": [],
       "builds_on": [],
-      "subtopics": ["computer", "program", "process", "input-output"],
-      "practice_type": "terminal observation"
+      "subtopics": ["program", "process", "thread", "address space", "execution context"],
+      "real_work_application": "서버가 떠 있는데 요청 처리가 멈추는 상황, CPU 사용률이 높은 상황, 동시성 문제를 구분해서 진단한다."
     },
     {
-      "id": "client-server-basics",
+      "id": "memory-stack-heap-basics",
       "level": 0,
-      "domain": "backend",
-      "title": "클라이언트와 서버 기초",
-      "prerequisites": ["computer-program-process-basics"],
-      "builds_on": ["computer-program-process-basics"],
-      "subtopics": ["client", "server", "request", "response"],
-      "practice_type": "simple request flow observation"
+      "domain": "cs",
+      "title": "메모리, 스택, 힙의 실무적 의미",
+      "prerequisites": ["program-process-thread-basics"],
+      "builds_on": ["program-process-thread-basics"],
+      "subtopics": ["memory", "stack", "heap", "allocation", "lifetime"],
+      "real_work_application": "메모리 누수, 큰 객체 할당, 재귀/콜스택 문제를 설명하고 장애 원인을 좁힌다."
     },
     {
-      "id": "internet-domain-dns-basics",
-      "level": 0,
-      "domain": "network",
-      "title": "인터넷, 도메인, IP, DNS 기초",
-      "prerequisites": ["client-server-basics"],
-      "builds_on": ["client-server-basics"],
-      "subtopics": ["internet", "domain", "ip", "dns"],
-      "practice_type": "dns lookup observation"
-    },
-    {
-      "id": "port-basics",
-      "level": 0,
-      "domain": "network",
-      "title": "포트의 의미와 기본 관찰",
-      "prerequisites": ["computer-program-process-basics", "client-server-basics"],
-      "builds_on": ["computer-program-process-basics", "client-server-basics"],
-      "subtopics": ["port", "listen", "connect", "service entry point"],
-      "practice_type": "port observation"
-    },
-    {
-      "id": "http-request-response-basics",
-      "level": 0,
-      "domain": "backend",
-      "title": "HTTP 요청과 응답 기초",
-      "prerequisites": ["client-server-basics", "internet-domain-dns-basics", "port-basics"],
-      "builds_on": ["client-server-basics", "port-basics"],
-      "subtopics": ["http", "request", "response", "browser-server flow"],
-      "practice_type": "http inspection"
-    },
-    {
-      "id": "url-method-header-body-basics",
-      "level": 0,
-      "domain": "backend",
-      "title": "URL, method, header, body 기초",
-      "prerequisites": ["http-request-response-basics"],
-      "builds_on": ["http-request-response-basics"],
-      "subtopics": ["url", "path", "query", "header", "body", "method"],
-      "practice_type": "request dissection"
-    },
-    {
-      "id": "status-code-basics",
-      "level": 0,
-      "domain": "backend",
-      "title": "기본 status code 기초",
-      "prerequisites": ["http-request-response-basics"],
-      "builds_on": ["http-request-response-basics"],
-      "subtopics": ["200", "201", "400", "404", "500"],
-      "practice_type": "response comparison"
-    },
-    {
-      "id": "json-api-basics",
-      "level": 0,
-      "domain": "backend",
-      "title": "JSON과 API 기초",
-      "prerequisites": ["url-method-header-body-basics"],
-      "builds_on": ["url-method-header-body-basics"],
-      "subtopics": ["json", "key-value", "api payload", "serialization"],
-      "practice_type": "json request-response lab"
-    },
-    {
-      "id": "server-routing-basics",
-      "level": 1,
-      "domain": "backend",
-      "title": "서버 라우팅 기초",
-      "prerequisites": ["http-request-response-basics", "json-api-basics"],
-      "builds_on": ["http-request-response-basics", "json-api-basics"],
-      "subtopics": ["route", "handler", "path matching"],
-      "practice_type": "tiny web server"
-    },
-    {
-      "id": "validation-error-basics",
-      "level": 1,
-      "domain": "backend",
-      "title": "요청 검증과 에러 응답 기초",
-      "prerequisites": ["status-code-basics", "server-routing-basics"],
-      "builds_on": ["status-code-basics", "server-routing-basics"],
-      "subtopics": ["validation", "bad request", "error body"],
-      "practice_type": "validation lab"
-    },
-    {
-      "id": "logging-basics",
-      "level": 1,
-      "domain": "backend",
-      "title": "서버 로그 기초",
-      "prerequisites": ["server-routing-basics"],
-      "builds_on": ["server-routing-basics"],
-      "subtopics": ["request log", "error log", "timestamp"],
-      "practice_type": "log reading lab"
-    },
-    {
-      "id": "test-basics",
-      "level": 1,
-      "domain": "backend",
-      "title": "서버 테스트 기초",
-      "prerequisites": ["server-routing-basics"],
-      "builds_on": ["server-routing-basics"],
-      "subtopics": ["expected result", "assertion", "regression"],
-      "practice_type": "basic API test"
-    },
-    {
-      "id": "database-basics",
+      "id": "cpu-scheduling-basics",
       "level": 1,
       "domain": "cs",
-      "title": "데이터베이스와 테이블 기초",
-      "prerequisites": ["json-api-basics"],
-      "builds_on": ["json-api-basics"],
-      "subtopics": ["database", "table", "row", "column"],
-      "practice_type": "data storage comparison"
+      "title": "CPU 스케줄링과 컨텍스트 스위칭",
+      "prerequisites": ["program-process-thread-basics"],
+      "builds_on": ["program-process-thread-basics"],
+      "subtopics": ["scheduler", "context switch", "blocking", "ready/running/waiting"],
+      "real_work_application": "스레드를 늘렸는데 처리량이 오르지 않는 이유와 latency spike를 설명한다."
     },
     {
-      "id": "crud-api-basics",
+      "id": "io-blocking-nonblocking-basics",
       "level": 1,
-      "domain": "backend",
-      "title": "CRUD API 기초",
-      "prerequisites": ["database-basics", "validation-error-basics"],
-      "builds_on": ["database-basics", "validation-error-basics"],
-      "subtopics": ["create", "read", "update", "delete"],
-      "practice_type": "todo crud lab"
+      "domain": "cs-network-applied",
+      "title": "I/O, blocking, non-blocking의 차이",
+      "prerequisites": ["program-process-thread-basics"],
+      "builds_on": ["program-process-thread-basics"],
+      "subtopics": ["I/O wait", "blocking", "non-blocking", "event loop"],
+      "real_work_application": "DB/네트워크 호출 지연이 애플리케이션 스레드와 응답 시간에 주는 영향을 설명한다."
     },
     {
-      "id": "transaction-intro",
+      "id": "ip-port-socket-basics",
+      "level": 1,
+      "domain": "network",
+      "title": "IP, 포트, 소켓의 경계",
+      "prerequisites": ["program-process-thread-basics"],
+      "builds_on": ["program-process-thread-basics"],
+      "subtopics": ["IP", "port", "socket", "listen", "connect"],
+      "real_work_application": "포트는 열려 있는데 연결이 실패하거나 특정 인터페이스에서만 접속되는 문제를 진단한다."
+    },
+    {
+      "id": "dns-resolution-practical",
+      "level": 1,
+      "domain": "network",
+      "title": "DNS 조회 흐름과 캐시",
+      "prerequisites": ["ip-port-socket-basics"],
+      "builds_on": ["ip-port-socket-basics"],
+      "subtopics": ["domain", "recursive resolver", "authoritative DNS", "TTL", "cache"],
+      "real_work_application": "배포 후 일부 사용자만 접속이 안 되는 문제, DNS 변경 전파 지연, 잘못된 레코드 문제를 설명한다."
+    },
+    {
+      "id": "tcp-connection-lifecycle",
       "level": 2,
+      "domain": "network",
+      "title": "TCP 연결 생명주기",
+      "prerequisites": ["ip-port-socket-basics"],
+      "builds_on": ["ip-port-socket-basics"],
+      "subtopics": ["three-way handshake", "state", "FIN", "RST", "TIME_WAIT"],
+      "real_work_application": "connection refused, timeout, reset, TIME_WAIT 증가를 구분해서 장애를 진단한다."
+    },
+    {
+      "id": "timeout-retry-backoff",
+      "level": 2,
+      "domain": "cs-network-applied",
+      "title": "Timeout, retry, backoff의 실무 기준",
+      "prerequisites": ["tcp-connection-lifecycle", "io-blocking-nonblocking-basics"],
+      "builds_on": ["tcp-connection-lifecycle"],
+      "subtopics": ["connect timeout", "read timeout", "retry", "exponential backoff", "idempotency"],
+      "real_work_application": "느린 외부 API가 전체 서비스를 멈추지 않게 하고, 재시도가 장애를 증폭시키지 않도록 설계한다."
+    },
+    {
+      "id": "latency-throughput-capacity",
+      "level": 2,
+      "domain": "cs-network-applied",
+      "title": "Latency, throughput, capacity 구분",
+      "prerequisites": ["cpu-scheduling-basics", "tcp-connection-lifecycle"],
+      "builds_on": ["cpu-scheduling-basics", "tcp-connection-lifecycle"],
+      "subtopics": ["latency", "throughput", "queueing", "bottleneck", "saturation"],
+      "real_work_application": "응답 시간이 느린 문제와 처리량 한계 문제를 분리해서 병목을 찾는다."
+    },
+    {
+      "id": "queueing-backpressure",
+      "level": 3,
+      "domain": "cs-network-applied",
+      "title": "Queueing과 backpressure",
+      "prerequisites": ["latency-throughput-capacity"],
+      "builds_on": ["latency-throughput-capacity"],
+      "subtopics": ["queue", "backpressure", "load shedding", "head-of-line blocking"],
+      "real_work_application": "트래픽 급증 시 큐가 쌓이고 지연이 폭발하는 원인을 설명하고 완화 전략을 고른다."
+    },
+    {
+      "id": "consistency-concurrency-basics",
+      "level": 3,
       "domain": "cs",
-      "title": "트랜잭션 입문",
-      "prerequisites": ["crud-api-basics"],
-      "builds_on": ["crud-api-basics"],
-      "subtopics": ["commit", "rollback", "all or nothing"],
-      "practice_type": "transfer lab"
-    },
-    {
-      "id": "tcp-basics",
-      "level": 2,
-      "domain": "network",
-      "title": "TCP 연결 기초",
-      "prerequisites": ["port-basics", "http-request-response-basics"],
-      "builds_on": ["port-basics", "http-request-response-basics"],
-      "subtopics": ["connection", "stream", "handshake"],
-      "practice_type": "tcp observation"
-    },
-    {
-      "id": "timeout-basics",
-      "level": 2,
-      "domain": "network",
-      "title": "timeout 기초",
-      "prerequisites": ["tcp-basics"],
-      "builds_on": ["tcp-basics"],
-      "subtopics": ["connect timeout", "read timeout", "waiting too long"],
-      "practice_type": "slow server lab"
-    },
-    {
-      "id": "redis-ttl-intro",
-      "level": 2,
-      "domain": "backend",
-      "title": "Redis TTL 입문",
-      "prerequisites": ["crud-api-basics", "timeout-basics"],
-      "builds_on": ["crud-api-basics", "timeout-basics"],
-      "subtopics": ["cache", "expire", "temporary data"],
-      "practice_type": "simple ttl lab"
+      "title": "동시성, race condition, consistency 기초",
+      "prerequisites": ["program-process-thread-basics", "memory-stack-heap-basics"],
+      "builds_on": ["program-process-thread-basics"],
+      "subtopics": ["race condition", "critical section", "lock", "atomicity", "visibility"],
+      "real_work_application": "동시에 들어온 작업이 같은 데이터를 갱신할 때 발생하는 오류를 설명하고 방어한다."
     }
   ]
 }

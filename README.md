@@ -1,19 +1,19 @@
-# Backend / CS / Network Study
+# CS / Network Study
 
-매일 백엔드, CS, 네트워크를 튜토리얼식으로 학습하는 저장소입니다.
+매일 CS와 네트워크를 질문-답변 방식으로 학습하는 저장소입니다.
 
 ## Structure
 
-- `theory/briefs/`: 아침 학습 브리프와 Telegram 요약
-- `theory/logs/`: 날짜별 학습 로그와 저녁 회고
-- `theory/reviews/`: Codex 리뷰 원문
+- `theory/briefs/`: 아침 Telegram 리포트와 보완 리스트
+- `theory/conversations/`: Telegram 기반 날짜별 Q/A 대화 기록
+- `theory/reports/`: 전날 대화 기반 이해도 평가 리포트
+- `theory/logs/`: 날짜별 학습 로그
 - `theory/curriculum/`: 커리큘럼과 topic bank
-- `theory/review-queue/`: 오답/복습 큐
-- `practice/`: OpenHands가 생성한 날짜별 실습 프로젝트
+- `theory/review-queue/`: 1주 뒤 재점검 큐와 약점 기록
 
 ## Daily Flow
 
-1. Hermes가 아침 학습 브리프와 퀴즈를 생성한다.
-2. OpenHands가 오늘 메인 주제에 맞는 실습 프로젝트를 만든다.
-3. Codex가 실습 결과와 문서를 리뷰한다.
-4. 산출물은 이 저장소의 `theory/`와 `practice/` 아래에 저장된다.
+1. Telegram 대화를 `theory/conversations/YYYY-MM-DD.md`에 기록한다.
+2. Hermes가 전날 대화를 기준으로 이해도를 엄격하게 채점한다.
+3. 90점 미만이면 보완 리스트와 1주 뒤 재점검 큐를 만든다.
+4. 오늘 이야기할 CS/network 주제와 질문을 Telegram으로 보낸다.
