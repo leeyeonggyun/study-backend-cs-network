@@ -1,5 +1,13 @@
 {
-  "queue": [],
+  "queue": [
+    {
+      "topic": "program-process-thread-basics",
+      "due_date": "2026-05-06",
+      "source_date": "2026-04-28",
+      "reason": "1주 뒤 동일 주제로 재점검합니다.",
+      "status": "pending"
+    }
+  ],
   "rules": {
     "first_review": "next_day",
     "second_review": "plus_3_days",
@@ -7,4 +15,3 @@
     "repeat_on_wrong_answer": true
   }
 }
-
