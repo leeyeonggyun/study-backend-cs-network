@@ -6,6 +6,13 @@
       "source_date": "2026-04-28",
       "reason": "1주 뒤 동일 주제로 재점검합니다.",
       "status": "pending"
+    },
+    {
+      "topic": "TCP 연결 생명주기 기반 장애 진단",
+      "due_date": "2026-05-13",
+      "source_date": "2026-05-06",
+      "reason": "전날 평가 48점(90점 미만)으로 진단 프레임 보완이 필요함.",
+      "status": "pending"
     }
   ],
   "rules": {
