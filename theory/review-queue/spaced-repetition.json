@@ -13,6 +13,13 @@
       "source_date": "2026-05-06",
       "reason": "전날 평가 48점(90점 미만)으로 진단 프레임 보완이 필요함.",
       "status": "pending"
+    },
+    {
+      "topic": "TCP 연결 생명주기 기반 장애 진단",
+      "due_date": "2026-05-15",
+      "source_date": "2026-05-07",
+      "reason": "오늘 보완 주제의 개념 정확도·인과·진단·tradeoff를 1주 후 재검증",
+      "status": "pending"
     }
   ],
   "rules": {
