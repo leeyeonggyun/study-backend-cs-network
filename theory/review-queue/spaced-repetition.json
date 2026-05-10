@@ -20,6 +20,13 @@
       "source_date": "2026-05-07",
       "reason": "오늘 보완 주제의 개념 정확도·인과·진단·tradeoff를 1주 후 재검증",
       "status": "pending"
+    },
+    {
+      "topic": "TCP 연결 실패 신호를 이용한 10분 장애 초기 분류",
+      "due_date": "2026-05-18",
+      "source_date": "2026-05-10",
+      "reason": "오늘 주제의 인과/진단/tradeoff 답변을 1주 뒤 재검증",
+      "status": "pending"
     }
   ],
   "rules": {
