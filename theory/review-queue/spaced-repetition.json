@@ -27,6 +27,13 @@
       "source_date": "2026-05-10",
       "reason": "오늘 주제의 인과/진단/tradeoff 답변을 1주 뒤 재검증",
       "status": "pending"
+    },
+    {
+      "topic": "멀티 AZ 장애 상황에서 TCP 연결 실패 신호 기반 초기 진단",
+      "due_date": "2026-05-18",
+      "source_date": "2026-05-11",
+      "reason": "전날 점수 52점(90 미만)으로 신호 구분 정확도와 진단 프레임 재검증이 필요하다.",
+      "status": "pending"
     }
   ],
   "rules": {
