@@ -34,6 +34,13 @@
       "source_date": "2026-05-11",
       "reason": "전날 점수 52점(90 미만)으로 신호 구분 정확도와 진단 프레임 재검증이 필요하다.",
       "status": "pending"
+    },
+    {
+      "topic": "TCP 연결 실패 신호로 10분 내 장애 원인 레이어 분류하기",
+      "due_date": "2026-05-20",
+      "source_date": "2026-05-12",
+      "reason": "오늘 답변의 신호 경계·가설 우선순위·반증 조건·tradeoff를 1주 뒤 재검증",
+      "status": "pending"
     }
   ],
   "rules": {
