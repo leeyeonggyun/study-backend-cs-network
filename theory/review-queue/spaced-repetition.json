@@ -41,6 +41,13 @@
       "source_date": "2026-05-12",
       "reason": "오늘 답변의 신호 경계·가설 우선순위·반증 조건·tradeoff를 1주 뒤 재검증",
       "status": "pending"
+    },
+    {
+      "topic": "TCP 연결 실패 신호로 10분 내 장애 원인 레이어 분류하기",
+      "due_date": "2026-05-21",
+      "source_date": "2026-05-13",
+      "reason": "오늘 답변의 신호 경계, 가설 우선순위, 반증 조건, tradeoff를 1주 뒤 재검증",
+      "status": "pending"
     }
   ],
   "rules": {
