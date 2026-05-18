@@ -55,6 +55,13 @@
       "source_date": "2026-05-14",
       "reason": "오늘 답변의 신호 경계, 가설 우선순위, 반증 조건, tradeoff를 1주 뒤 재검증",
       "status": "pending"
+    },
+    {
+      "topic": "TCP 실패 신호 기반 10분 장애 초기 분류 (Remediation)",
+      "due_date": "2026-05-26",
+      "source_date": "2026-05-18",
+      "reason": "전날 평가 90점 미만으로 신호 경계·인과·진단 우선순위 재검증이 필요함.",
+      "status": "pending"
     }
   ],
   "rules": {
