@@ -6,69 +6,6 @@
       "source_date": "2026-04-28",
       "reason": "1주 뒤 동일 주제로 재점검합니다.",
       "status": "pending"
-    },
-    {
-      "topic": "TCP 연결 생명주기 기반 장애 진단",
-      "due_date": "2026-05-13",
-      "source_date": "2026-05-06",
-      "reason": "전날 평가 48점(90점 미만)으로 진단 프레임 보완이 필요함.",
-      "status": "pending"
-    },
-    {
-      "topic": "TCP 연결 생명주기 기반 장애 진단",
-      "due_date": "2026-05-15",
-      "source_date": "2026-05-07",
-      "reason": "오늘 보완 주제의 개념 정확도·인과·진단·tradeoff를 1주 후 재검증",
-      "status": "pending"
-    },
-    {
-      "topic": "TCP 연결 실패 신호를 이용한 10분 장애 초기 분류",
-      "due_date": "2026-05-18",
-      "source_date": "2026-05-10",
-      "reason": "오늘 주제의 인과/진단/tradeoff 답변을 1주 뒤 재검증",
-      "status": "pending"
-    },
-    {
-      "topic": "멀티 AZ 장애 상황에서 TCP 연결 실패 신호 기반 초기 진단",
-      "due_date": "2026-05-18",
-      "source_date": "2026-05-11",
-      "reason": "전날 점수 52점(90 미만)으로 신호 구분 정확도와 진단 프레임 재검증이 필요하다.",
-      "status": "pending"
-    },
-    {
-      "topic": "TCP 연결 실패 신호로 10분 내 장애 원인 레이어 분류하기",
-      "due_date": "2026-05-20",
-      "source_date": "2026-05-12",
-      "reason": "오늘 답변의 신호 경계·가설 우선순위·반증 조건·tradeoff를 1주 뒤 재검증",
-      "status": "pending"
-    },
-    {
-      "topic": "TCP 연결 실패 신호로 10분 내 장애 원인 레이어 분류하기",
-      "due_date": "2026-05-21",
-      "source_date": "2026-05-13",
-      "reason": "오늘 답변의 신호 경계, 가설 우선순위, 반증 조건, tradeoff를 1주 뒤 재검증",
-      "status": "pending"
-    },
-    {
-      "topic": "TCP 연결 실패 신호로 10분 내 장애 원인 레이어 분류하기",
-      "due_date": "2026-05-22",
-      "source_date": "2026-05-14",
-      "reason": "오늘 답변의 신호 경계, 가설 우선순위, 반증 조건, tradeoff를 1주 뒤 재검증",
-      "status": "pending"
-    },
-    {
-      "topic": "TCP 실패 신호 기반 10분 장애 초기 분류 (Remediation)",
-      "due_date": "2026-05-26",
-      "source_date": "2026-05-18",
-      "reason": "전날 평가 90점 미만으로 신호 경계·인과·진단 우선순위 재검증이 필요함.",
-      "status": "pending"
-    },
-    {
-      "topic": "TCP 실패 신호로 10분 내 장애 원인 레이어 분류하기 (Remediation)",
-      "due_date": "2026-05-27",
-      "source_date": "2026-05-19",
-      "reason": "오늘 답변의 신호 경계·가설 우선순위·반증 조건·tradeoff를 1주 뒤 재검증",
-      "status": "pending"
     }
   ],
   "rules": {
